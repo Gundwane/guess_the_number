@@ -2,6 +2,7 @@
 
 from random import randint
 
+#Computadora adivina el número
 def computer_guess():
     inf_limit = 0
     sup_limit = 100
@@ -26,6 +27,7 @@ def computer_guess():
     else:
         print('Genial!')
 
+#Usuario adivina el número
 def user_guess():
     num = randint(0, 100)
     flag = False
@@ -47,10 +49,27 @@ def user_guess():
         except ValueError:
             print("Debes ingresar un número")
 
-user_response = input("Escribe 'yo' si quieres adivinar mi número. Sino, yo intentaré adivinar tu número ")
+keep_playing = True
 
-if user_response == 'yo':
-    user_guess()
+while keep_playing == True:
+
+    user_response = input("Escribe 'yo' si quieres adivinar mi número. Sino, yo intentaré adivinar tu número ")
+
+    if user_response.lower() == 'yo':
+        user_guess()
+    else:
+        computer_guess()
+
+    response = input("Quieres volver a jugar? (Responde Si o No)")
+
+    if response.lower() == 'si':
+        keep_playing = True
+    elif response.lower() == 'no':
+        keep_playing = False
+    else:
+        print("No reconozco tu respuesta : /")
+        keep_playing = True
+
 else:
-    computer_guess()
+    print("See ya!")
 
