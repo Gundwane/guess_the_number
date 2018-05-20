@@ -8,8 +8,8 @@ def computer_guess():
     sup_limit = 100
     flag = False
 
-    print("Intentaré adivinar el número en el que estás pensando, entonces...")
-    print("Pulsa '-' si tu número es menor, '+' si tu número es mayor o '=' si he adivinado tu número ")
+    print("Intentaré adivinar el número en el que estás pensando, entonces. \n Piensa en un número del 0 al 100")
+    print("Pulsa '-'(menos) si tu número es menor, '+'(mas) si tu número es mayor o '='(igual) si he adivinado tu número ")
 
     while flag == False:
 
@@ -32,7 +32,7 @@ def user_guess():
     num = randint(0, 100)
     flag = False
 
-    print("Adivina mi número, entonces...")
+    print("Pensaré en un número del 0 al 100. Tu intenta adivinar cuál es.")
 
     while flag == False:
         try:
@@ -51,6 +51,8 @@ def user_guess():
 
 keep_playing = True
 
+print("Bienvenido!")
+
 while keep_playing == True:
 
     user_response = input("Escribe 'yo' si quieres adivinar mi número. Sino, yo intentaré adivinar tu número ")
@@ -60,7 +62,7 @@ while keep_playing == True:
     else:
         computer_guess()
 
-    response = input("Quieres volver a jugar? (Responde Si o No)")
+    response = input("Quieres volver a jugar? (Responde Si o No, o Salir para bueno...salir)")
 
     if response.lower() == 'si':
         keep_playing = True
