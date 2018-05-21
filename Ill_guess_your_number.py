@@ -4,11 +4,11 @@ from random import randint
 
 #Computadora adivina el número
 def computer_guess():
-    inf_limit = 0
+    inf_limit = 1
     sup_limit = 100
     flag = False
 
-    print("Intentaré adivinar el número en el que estás pensando, entonces. \n Piensa en un número del 0 al 100")
+    print("Intentaré adivinar el número en el que estás pensando, entonces. \n Piensa en un número del 1 al 100")
     print("Pulsa '-'(menos) si tu número es menor, '+'(mas) si tu número es mayor o '='(igual) si he adivinado tu número ")
 
     while flag == False:
@@ -30,10 +30,10 @@ def computer_guess():
 
 #Usuario adivina el número
 def user_guess():
-    num = randint(0, 100)
+    num = randint(1, 100)
     flag = False
 
-    print("Pensaré en un número del 0 al 100. Tu intenta adivinar cuál es.")
+    print("Pensaré en un número del 1 al 100. Tu intenta adivinar cuál es.")
 
     while flag == False:
         try:
