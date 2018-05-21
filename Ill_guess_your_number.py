@@ -14,12 +14,13 @@ def computer_guess():
     while flag == False:
 
         num = randint(inf_limit, sup_limit)
+
         respuesta = input("Tu número es "+str(num)+" ?")
 
         if respuesta == '-':
-            sup_limit = num
+            sup_limit = num - 1
         elif respuesta == '+':
-            inf_limit = num
+            inf_limit = num + 1
         elif respuesta == '=':
             flag = True
         else:
